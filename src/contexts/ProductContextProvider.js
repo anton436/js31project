@@ -38,7 +38,16 @@ const ProductContextProvider = ({ children }) => {
     navigate("/products");
   };
 
-  const values = { addProduct, getProducts, products: state.products };
+  const deleteProduct = async (id) => {
+    await axios.delete(`${JSON_API_PRODUCTS}/${id}`);
+    getProducts();
+  };
+  const values = {
+    addProduct,
+    getProducts,
+    products: state.products,
+    deleteProduct,
+  };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
   );
