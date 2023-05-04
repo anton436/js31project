@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "name": "Adilet",
+      "description": "asd",
+      "price": 1234,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "1234t",
+      "id": 7
+    }
+  ]
+}
