@@ -8,6 +8,7 @@ body {
   background-size: cover;
   position: relative;
   max-width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
@@ -100,15 +101,7 @@ body {
   left: 29%;
 }
 /* start Meerim */
-.btn {
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 12px;
-  letter-spacing: 3.25px;
-  word-wrap: break-word;
-  padding: 23px 48px;
-}
+
 .btn {
   background-color: transparent;
   border: 1px solid #242b2f;
@@ -319,9 +312,12 @@ body {
     display: none;
   }
   #a1 {
-    padding: 0;
+    margin-left: -55px;
   }
   #videoPart {
     padding: 0 1em;
+  }
+  .btn {
+    width: 15rem;
   }
 }

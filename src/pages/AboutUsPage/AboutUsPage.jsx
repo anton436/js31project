@@ -209,7 +209,7 @@ const AboutUsPage = () => {
         <div>
           <h4
             style={{
-              fontSize: "2.8em",
+              fontSize: "2.6em",
               // lineHeight: "3em",
               letterSpacing: "-0.125em",
               fontWeight: "37.5em",
@@ -306,12 +306,12 @@ const AboutUsPage = () => {
           <Card
             sx={{
               // maxWidth: "345",
-              minWidth: "500px",
-              height: "550px",
+              // minWidth: "224px",
+              // height: "550px",
               border: "1px solid #d1d1cd ",
               paddingBottom: "96px",
               position: "relative",
-              width: "calc(50% - 2 * 12px)",
+              width: "41rem",
             }}
           >
             <CardActionArea>
@@ -331,8 +331,8 @@ const AboutUsPage = () => {
               <CardContent>
                 <Typography
                   sx={{
-                    fontSize: " 27px",
-                    lineHeight: "30px",
+                    fontSize: " 1.68rem",
+                    lineHeight: "1.875rem",
                     letterSpacing: "-.75px",
                     fontWeight: "600",
                     wordWrap: "break-word",
@@ -346,8 +346,8 @@ const AboutUsPage = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "18px",
-                    lineHeight: "27px",
+                    fontSize: "1.125rem",
+                    lineHeight: "1.6875rem",
                     letterSpacing: "-.1px",
                     fontWeight: "400",
                     wordWrap: "break-word",
@@ -387,13 +387,12 @@ const AboutUsPage = () => {
           <Card
             sx={{
               // maxWidth: "345",
-              minWidth: "500px",
-              alignSelf: "center",
+              // minWidth: "224px",
+              // height: "550px",
               border: "1px solid #d1d1cd ",
               paddingBottom: "96px",
               position: "relative",
-              width: "calc(50% - 2 * 12px)",
-              height: "550px",
+              width: "41rem",
             }}
           >
             <CardActionArea>
@@ -406,15 +405,15 @@ const AboutUsPage = () => {
                 title=""
                 data-srcset="https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=147&amp;iar=1&amp;w=400&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=867CE34879A6AF31EEDD746356AD0B38 400w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=228&amp;iar=1&amp;w=620&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=A0D36464BE394923B84CDCA8C2A2BAB4 620w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=295&amp;iar=1&amp;w=800&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=5817A36FD321E185FB2256FD8C76795F 800w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=442&amp;iar=1&amp;w=1200&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=D85D3A83B63B27535B299B31FB9D3748 1200w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=589&amp;iar=1&amp;w=1600&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=8A060D9DD5EC933B6209CC0A55770C0E 1600w"
                 srcset="https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=147&amp;iar=1&amp;w=400&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=867CE34879A6AF31EEDD746356AD0B38 400w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=228&amp;iar=1&amp;w=620&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=A0D36464BE394923B84CDCA8C2A2BAB4 620w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=295&amp;iar=1&amp;w=800&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=5817A36FD321E185FB2256FD8C76795F 800w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=442&amp;iar=1&amp;w=1200&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=D85D3A83B63B27535B299B31FB9D3748 1200w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/golf/m-23-golf-logo.png?as=1&amp;h=589&amp;iar=1&amp;w=1600&amp;rev=3ee4361517074dd3938a80b0f31f32ff&amp;hash=8A060D9DD5EC933B6209CC0A55770C0E 1600w"
-                sizes="698px"
+                width="100%"
                 data-sizes="auto"
               />
               <br />
               <CardContent>
                 <Typography
                   sx={{
-                    fontSize: " 27px",
-                    lineHeight: "30px",
+                    fontSize: " 1.68rem",
+                    lineHeight: "1.875rem",
                     letterSpacing: "-.75px",
                     fontWeight: "600",
                     wordWrap: "break-word",
@@ -428,8 +427,8 @@ const AboutUsPage = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "18px",
-                    lineHeight: "27px",
+                    fontSize: "1.125rem",
+                    lineHeight: "1.6875rem",
                     letterSpacing: "-.1px",
                     fontWeight: "400",
                     wordWrap: "break-word",
@@ -442,6 +441,7 @@ const AboutUsPage = () => {
                   and clubs.
                 </Typography>
               </CardContent>
+              <br />
             </CardActionArea>
             <CardActions>
               <Button
