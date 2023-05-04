@@ -5,7 +5,7 @@ const Figures = () => {
   return (
     <div className="figContainer">
       <p>Photo Credits: Christoph Maderer/ PUMA</p>
-      <h2>PUMA IN FIGURES</h2>
+      <h2 id="h2">PUMA IN FIGURES</h2>
       <div className="text__container">
         <div className="block__text">
           <h3>8.465</h3>

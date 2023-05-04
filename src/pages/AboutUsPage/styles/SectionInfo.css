@@ -7,6 +7,10 @@
   justify-content: center;
   padding-left: 5em;
 }
+#bgIMG {
+  display: none;
+  width: 100%;
+}
 .container h2 {
   color: white;
   font-size: 2.4em;
@@ -29,4 +33,21 @@
 .container button:hover {
   background-color: white;
   transform: scaleY(0.2s);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    background-image: none;
+    padding: 0 1rem;
+  }
+  .container h2 {
+    color: black;
+  }
+  .container p {
+    color: black;
+  }
+  #bgIMG {
+    display: block;
+  }
 }

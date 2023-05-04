@@ -10,7 +10,7 @@
   margin: 4em auto;
 }
 
-h2 {
+#h2 {
   margin-top: 1em;
   font-size: 45px;
   line-height: 48px;
@@ -41,4 +41,10 @@ h2 {
   font-size: 1.6em;
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(58, 58, 58);
+}
+
+@media screen and (max-width: 768px) {
+  .text__container {
+    flex-wrap: wrap;
+  }
 }

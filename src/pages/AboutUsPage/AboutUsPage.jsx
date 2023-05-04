@@ -8,20 +8,16 @@ import "../AboutUsPage/styles/about.css";
 import PeopleCards from "./PeopleCards";
 import Figures from "./Figures";
 import SectionInfo from "./SectionInfo";
+import { Image } from "@mui/icons-material";
+import imgbg from "./assets/Header-Thisispuma_Karsten.jpg";
+
 const AboutUsPage = () => {
   return (
     <div style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>
       {/* start Aidai's part */}
-      <div className="first-content-container">
-        <div
-          style={{
-            paddingLeft: "96px",
-            paddingRight: "96px",
-            position: "absolute",
-            top: "33%",
-            color: "white",
-          }}
-        >
+      <div className="first-content-container adapt">
+        <img id="imgbg" src={imgbg} alt="" />
+        <div id="textAdapt">
           <div className="headline-about">
             <p>PERFORMANCE ON ALL LEVELS</p>
             <h1>THIS IS PUMA</h1>
@@ -40,24 +36,12 @@ const AboutUsPage = () => {
       <div className="second-content-container">
         <div className="second-content-left">
           <h2 className="headline">
-            <span className="spanbe">BE</span>
+            <span className="spanbe tad">BE</span>
             <br />
-            <span className="spanbrave">BRAVE</span>
+            <span className="spanbrave tad">BRAVE</span>
           </h2>
           <div>
-            <p
-              style={{
-                color: "white",
-                paddingRight: "96px",
-                color: "white",
-                fontSize: "18px",
-                lineHeight: "27px",
-                letterSpacing: " -.1px",
-                fontWeight: 400,
-                lineHeight: "2em",
-                // fontFamily: "DIN Pro,Arial,sans-serif",
-              }}
-            >
+            <p id="pAdapt" className="tad">
               We’re never afraid to take risks. We trust our instincts to make
               unexpected choices that push sport forward.
             </p>
@@ -66,39 +50,22 @@ const AboutUsPage = () => {
         </div>
         <div className="second-content-right">
           <img
-            style={{ width: "110%", height: 650, marginTop: 90 }}
+            id="imageAdapt"
+            style={{ marginTop: "4rem", width: "100%" }}
             src="https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-08_1968_tommie-smith_black-power.jpg?as=1&h=1000&iar=1&w=1200&rev=0d7c67eadd634663aa66d355066e45ad&hash=277160DC1817F7E18D0CEFF482C5ADF0"
             alt=""
           />
         </div>
-        <div className="arrow">
-          <a href="#" class="previous1 round">
-            &#8249;
-          </a>
-          <a href="#" class="next1 round">
-            &#8250;
-          </a>
-        </div>
       </div>
       {/* finish Aidai's part */}
       {/* Start Meerim's part */}
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          margin: "12em 0",
-          gap: "20px",
-          marginBottom: "100px",
-        }}
-      >
+      <div id="faster">
         <div
           style={{ width: "80%", display: "flex", justifyContent: "center" }}
           className="left"
         >
           <img
-            style={{ width: "584px", height: "730px" }}
+            id="fasterimg"
             src="https://cdn.about.puma.com/-/media/images/this-is-puma/m-11_16aw_brand_dna-wall_degrasse_01.jpg?as=1&h=960&iar=1&w=768&rev=ea503cfcfcfc46a0890f0fe2ad061114&hash=5ECA2670B51F9DBA58733CE13B4A291E"
           />
         </div>
@@ -106,10 +73,7 @@ const AboutUsPage = () => {
           style={{ display: "flex", flexDirection: "column" }}
           className="right"
         >
-          <div
-            style={{ display: "flex", gap: "20px", opacity: 0.2 }}
-            className="image-container"
-          >
+          <div className="image-container">
             <img
               style={{ width: "356px", height: "445px" }}
               src="https://cdn.about.puma.com/-/media/images/this-is-puma/quote_karsten.jpg?as=1&h=1280&iar=1&w=1024&rev=612e669f616e4929800846128b6865b5&hash=A4E77214D4C15E3D133546F699B7C508"
@@ -120,37 +84,11 @@ const AboutUsPage = () => {
               src="https://cdn.about.puma.com/-/media/images/this-is-puma/quote_yaroslava.jpg?as=1&h=1280&iar=1&w=1024&rev=c890a9430eca4cdb8f301af1c1e1477b&hash=D7F77AEE66F736BB383B8F008D359126"
             />
           </div>
-          <div
-            style={{
-              width: "90%",
-              display: "flex",
-              flexDirection: "column",
-              paddingLeft: "50px",
-              marginTop: "-55px",
-              fontFamily: "Arial, san-serif",
-            }}
-            className="text-containar"
-          >
-            <h1
-              style={{
-                fontWeight: "50",
-                fontSize: "57px",
-                marginBottom: "36px",
-                marginTop: "-8px",
-                fontFamily: "DIN Pro,Arial,sans-serif",
-              }}
-            >
+          <div className="text-containar">
+            <h1>
               I ALWAYS THINK THAT
               <br />
-              <strong
-                style={{
-                  fontWeight: "700",
-                  fontFamily: "Arial, san-serif",
-                  fontSize: "60px",
-                }}
-              >
-                I AM FOREVER FASTER.
-              </strong>
+              <strong>I AM FOREVER FASTER.</strong>
             </h1>
             <p
               style={{
@@ -162,13 +100,7 @@ const AboutUsPage = () => {
               ANDRE DE GRASSE
             </p>
           </div>
-          <div
-            style={{
-              display: "flex",
-              marginTop: "-110px",
-              marginLeft: "-110px",
-            }}
-          >
+          <div id="mBtn">
             <button
               className="prev"
               style={{
@@ -220,20 +152,7 @@ const AboutUsPage = () => {
           src="https://cdn.about.puma.com/-/media/images/this-is-puma/our-sports/our_sport_new.png?as=1&h=800&iar=1&w=1600&rev=c9329a524228411690b7d6be05085a90&hash=6C9E6132924926719943C44CE676E94C"
         />
       </div>
-      <div
-        style={{
-          maxWidth: "41%",
-          fontFamily: "DIN Pro,Arial,sans-serif",
-          color: "#242b2f",
-          marginLeft: "70px",
-          paddingLeft: "10px",
-          marginTop: "-135px",
-          padding: "48px 48px 0px 0px",
-          backgroundColor: "white",
-          zIndex: "10",
-        }}
-        className="text-wrapper"
-      >
+      <div className="text-wrapper">
         <h1
           style={{
             fontSize: "45px",
@@ -270,7 +189,7 @@ const AboutUsPage = () => {
             margin: "50px 0px",
           }}
         >
-          <a style={{ width: "12em" }} href="#">
+          <a id="a1" href="#">
             <button className="btn">EXPLORE OUR SPORTS</button>
           </a>
         </div>
@@ -286,16 +205,16 @@ const AboutUsPage = () => {
 
       {/* Start last part */}
       <div style={{ height: "86px" }}></div>
-      <div style={{ padding: "0 96px" }}>
+      <div id="videoPart">
         <div>
           <h4
             style={{
-              fontSize: "45px",
-              lineHeight: "48px",
-              letterSpacing: "-2px",
-              fontWeight: "600",
-              wordWrap: "break-word",
-              marginBottom: "18px",
+              fontSize: "2.8em",
+              // lineHeight: "3em",
+              letterSpacing: "-0.125em",
+              fontWeight: "37.5em",
+              // wordWrap: "break-word",
+              marginBottom: "1.125em",
             }}
           >
             PUMA HEADQUARTERS
@@ -303,36 +222,34 @@ const AboutUsPage = () => {
           <br />
           <p
             style={{
-              fontSize: "18px",
-              lineHeight: "27px",
-              letterSpacing: "-.1px",
-              fontWeight: "400",
+              fontSize: "1.125em",
+              lineHeight: "1.6em",
+              letterSpacing: "-0.06em",
+              fontWeight: "25em",
               wordWrap: "break-word",
             }}
           >
-            <strong style={{ fontWeight: "600" }}>
+            <strong style={{ fontWeight: "37.5em" }}>
               Herzogenaurach, Germany
             </strong>
           </p>
         </div>
-        <div style={{ height: "48px" }}></div>
+        <div style={{ height: "3em" }}></div>
         {/* start video */}
-        <div>
+        <div style={{ maxWidth: "100%" }}>
           <img
             class="image fit center-center lazyautosizes lazyloaded"
             data-sizes="auto"
             src="https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=608&amp;iar=1&amp;w=1080&amp;rev=-1&amp;hash=35413C3AA455D69C6B9E8347A535ABAC"
-            data-src="https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=608&amp;iar=1&amp;w=1080&amp;rev=-1&amp;hash=35413C3AA455D69C6B9E8347A535ABAC"
             alt=""
             title=""
-            data-srcset="https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=608&amp;iar=1&amp;w=1080&amp;rev=-1&amp;hash=35413C3AA455D69C6B9E8347A535ABAC 1080w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=872&amp;iar=1&amp;w=1550&amp;rev=-1&amp;hash=313F4B50BC10177DCDA215A473FDBCDD 1550w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=1080&amp;iar=1&amp;w=1920&amp;rev=-1&amp;hash=F1D1EE44E9680DFE1E96F7A6DBA9EDF9 1920w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=1350&amp;iar=1&amp;w=2400&amp;rev=-1&amp;hash=66FF74D08EE96814BE1301506E14E2A9 2400w"
-            srcset="https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=608&amp;iar=1&amp;w=1080&amp;rev=-1&amp;hash=35413C3AA455D69C6B9E8347A535ABAC 1080w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=872&amp;iar=1&amp;w=1550&amp;rev=-1&amp;hash=313F4B50BC10177DCDA215A473FDBCDD 1550w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=1080&amp;iar=1&amp;w=1920&amp;rev=-1&amp;hash=F1D1EE44E9680DFE1E96F7A6DBA9EDF9 1920w, https://cdn.about.puma.com/-/media/images/this-is-puma/our-mission/m-20-vorschaubild-mood-video-drohne-2/videopreview_hq.jpg?as=1&amp;h=1350&amp;iar=1&amp;w=2400&amp;rev=-1&amp;hash=66FF74D08EE96814BE1301506E14E2A9 2400w"
-            sizes="1327px"
-          ></img>
+            width="90%"
+          />
+
           <iframe
             style={{
-              width: "1327px",
-              height: "746px",
+              width: "83em",
+              height: "47em",
               left: "0px",
               top: "0px",
               display: "none",
@@ -347,30 +264,30 @@ const AboutUsPage = () => {
           <span
             style={{
               fontFamily: "DIN Pro,Arial,sans-serif",
-              fontSize: "14px",
-              lineHeight: "14px",
-              fontWeight: "600",
-              letterSpacing: "2px",
+              fontSize: "0.8em",
+              lineHeight: "0.8em",
+              fontWeight: "37.5em",
+              letterSpacing: "0.125em",
               wordWrap: "break-word",
-              fontWeight: "400",
+              fontWeight: "25em",
             }}
           >
             Video Credit: Andi Mährlein
           </span>
         </div>
       </div>
-      <div style={{ height: "86px" }}></div>
+      <div style={{ height: "5.375em" }}></div>
       <div>
         <div>
           <h5
             style={{
-              fontSize: "45px",
-              lineHeight: "48px",
-              letterSpacing: "-2px",
-              fontWeight: "600",
+              fontSize: "2.8em",
+              lineHeight: "3em",
+              // letterSpacing: "-0.125em",
+              fontWeight: "37.5em",
               wordWrap: "break-word",
-              marginBottom: "36px",
-              padding: "0 48px",
+              // marginBottom: "0.25em",
+              padding: "0 1em",
             }}
           >
             PUMA BRANDS
@@ -381,15 +298,17 @@ const AboutUsPage = () => {
             display: "flex",
             width: "100%",
             height: "78%",
-            padding: "0 48px",
+            padding: "0 3em",
             justifyContent: "space-between",
+            flexWrap: "wrap",
           }}
         >
           <Card
             sx={{
-              maxWidth: "345",
+              // maxWidth: "345",
+              minWidth: "500px",
+              height: "550px",
               border: "1px solid #d1d1cd ",
-
               paddingBottom: "96px",
               position: "relative",
               width: "calc(50% - 2 * 12px)",
@@ -467,11 +386,14 @@ const AboutUsPage = () => {
           </Card>
           <Card
             sx={{
-              maxWidth: "345",
+              // maxWidth: "345",
+              minWidth: "500px",
+              alignSelf: "center",
               border: "1px solid #d1d1cd ",
               paddingBottom: "96px",
               position: "relative",
               width: "calc(50% - 2 * 12px)",
+              height: "550px",
             }}
           >
             <CardActionArea>

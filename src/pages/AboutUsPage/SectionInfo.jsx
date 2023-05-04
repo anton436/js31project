@@ -1,9 +1,10 @@
 import React from "react";
 import "../AboutUsPage/styles/SectionInfo.css";
-
+import bgIMG from "./assets/bg-section.jpg";
 const SectionInfo = () => {
   return (
     <div className="container">
+      <img id="bgIMG" src={bgIMG} alt="" />
       <h2>EXPERIENCED PLAYERS</h2>
       <p>
         A success story is about more than just being at the right place <br />{" "}
