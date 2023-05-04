@@ -9,8 +9,9 @@ import MainRoutes from "./routes/MainRoutes";
 const App = () => {
   return (
     <div>
-      <NavTop />
+      <NavbarB />
       <Navbar />
+      <NavTop />
       <NavbarB />
       <ContactUs />
       <MainRoutes />
