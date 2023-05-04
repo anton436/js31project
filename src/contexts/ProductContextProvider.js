@@ -1,11 +1,14 @@
 import axios from "axios";
 import React, { createContext, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
-import { ACTIONS, JSON_API_PRODUCTS } from "../helpers/conts";
+import { ACTIONS, JSON_API_PRODUCTS } from "../helpers/consts";
+
 export const productContext = createContext();
+
 export const useProducts = () => {
   return useContext(productContext);
 };
+
 const INIT_STATE = {
   products: [],
 };
@@ -19,11 +22,14 @@ const reducer = (state = INIT_STATE, action) => {
       return state;
   }
 };
+
 const ProductContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+
   const getProducts = async () => {
     const { data } = await axios(JSON_API_PRODUCTS);
+
     dispatch({ type: ACTIONS.GET_PRODUCTS, payload: data });
   };
 

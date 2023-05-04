@@ -11,21 +11,24 @@ const AddProduct = () => {
     picture: "",
     type: "",
   });
-  const handleInp = (event) => {
-    if (event.target.name === "price") {
+
+  const handleInp = (e) => {
+    if (e.target.name === "price") {
       let obj = {
         ...product,
-        [event.target.name]: Number(event.target.value),
+        [e.target.name]: Number(e.target.value),
       };
       setProduct(obj);
     } else {
       let obj = {
         ...product,
-        [event.target.name]: event.target.value,
+        [e.target.name]: e.target.value,
       };
       setProduct(obj);
     }
   };
+
+  console.log(product);
 
   return (
     <>
@@ -80,7 +83,7 @@ const AddProduct = () => {
           size="small"
           name="type"
           onChange={handleInp}
-        />{" "}
+        />
         <Button
           onClick={() => addProduct(product)}
           fullWidth

@@ -29,7 +29,7 @@ export default function ProductCard({ item }) {
       </CardContent>
       <CardActions>
         <Button size="small">Edit</Button>
-        <Button onClick={() => deleteProduct(item.id)} size="small">
+        <Button size="small" onClick={() => deleteProduct(item.id)}>
           Delete
         </Button>
         <Button size="small">Details</Button>
