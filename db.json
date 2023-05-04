@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "name": "sdfghk",
+      "description": "sdfgh",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "sdfg",
+      "id": 1
+    },
+    {
+      "name": "sdfg",
+      "description": "asdf",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "234567",
+      "id": 2
+    },
+    {
+      "name": "awert",
+      "description": "sdfg",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "sdfg",
+      "id": 3
+    },
+    {
+      "name": "awertxsdfghj",
+      "description": "sdfg",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "sdfg",
+      "id": 4
+    },
+    {
+      "name": "awertxsdfghj",
+      "description": "sdfg",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "sdfg",
+      "id": 5
+    },
+    {
+      "name": "cd",
+      "description": "xd",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "df",
+      "id": 6
+    },
+    {
+      "name": "sdmksdk",
+      "description": "s",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "s",
+      "id": 7
+    },
+    {
+      "name": "sdmksdk",
+      "description": "s",
+      "price": null,
+      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "type": "s",
+      "id": 8
+    }
+  ]
+}

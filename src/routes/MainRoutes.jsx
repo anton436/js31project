@@ -6,6 +6,9 @@ import AuthPage from "../pages/AuthPage";
 import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ProductsPage from "../pages/ProductsPage";
+import ProductSmallCard from "../components/Product/ProductSmallCard";
+import ProductSmallCardPages from "../pages/ProductSmallCardPages";
+import ProductBigCard from "../components/Product/ProductBigCard";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [

@@ -1,7 +1,9 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
+import { useProducts } from "../../context/ProductContextProvider";
 
 const AddProduct = () => {
+  const { addProduct } = useProducts();
   const [product, setProduct] = useState({
     name: "",
     description: "",
@@ -82,7 +84,13 @@ const AddProduct = () => {
           name="type"
           onChange={handleInp}
         />
-        <Button fullWidth variant="outlined">
+        <Button
+          fullWidth
+          variant="outlined"
+          onClick={() => {
+            addProduct(product);
+          }}
+        >
           Add Product
         </Button>
       </Box>
