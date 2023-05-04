@@ -5,14 +5,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useProducts } from "../../context/ProductsContextProvider";
+import { useProducts } from "../../contexts/ProductContextProvider";
 
 export default function ProductCard({ item }) {
-  const { deleteProducts } = useProducts();
+  const { deleteProduct } = useProducts();
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 250 }}
+        sx={{ height: 140 }}
         image={item.picture}
         title="green iguana"
       />
@@ -29,7 +29,7 @@ export default function ProductCard({ item }) {
       </CardContent>
       <CardActions>
         <Button size="small">Edit</Button>
-        <Button onClick={() => deleteProducts(item.id)} size="small">
+        <Button size="small" onClick={() => deleteProduct(item.id)}>
           Delete
         </Button>
         <Button size="small">Details</Button>

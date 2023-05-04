@@ -8,6 +8,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import "../style/NewsPage.css";
+import NewCard from "../components/Product/NewCard";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -21,7 +22,7 @@ function TabPanel(props) {
       aria-labelledby={`action-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box sx={{ p: 4 }}>{children}</Box>}
     </Typography>
   );
 }
@@ -60,18 +61,41 @@ export default function NewsPage() {
     <Box
       className="actve"
       sx={{
-        bgcolor: "background.paper",
-        width: 1000,
+        width: 1300,
         position: "relative",
-        minHeight: 200,
+        minHeight: 400,
+        boxShadow: "none",
+        paddingTop: 5,
+        margin: "0 auto",
       }}
     >
-      <AppBar position="static">
+      {" "}
+      <Typography
+        sx={{
+          fontSize: "32px",
+          fontWeight: 400,
+          height: 80,
+          paddingLeft: 6,
+        }}
+      >
+        NEWS
+      </Typography>
+      <AppBar
+        position="static"
+        sx={{
+          boxShadow: "none",
+          color: "#AE322F",
+          width: "1100px",
+          paddingLeft: 10,
+          backgroundColor: "white",
+        }}
+      >
         <Tabs
+          sx={{ boxShadow: "none", color: "#AE322F" }}
           value={value}
           onChange={handleChange}
           // indicatorColor="red"
-          // textColor="red"
+          // textColor="black"
           variant="fullWidth"
           aria-label="action tabs example"
         >
@@ -104,9 +128,18 @@ export default function NewsPage() {
             sx={{
               fontSize: "12px",
               backgroundColor: "white",
+              letterSpacing: 0,
             }}
             label="VIRTUAL PRESS CONFERENCES"
             {...a11yProps(3)}
+          />
+          <Tab
+            sx={{
+              fontSize: "12px",
+              backgroundColor: "white",
+            }}
+            label="Select a year"
+            {...a11yProps(4)}
           />
         </Tabs>
       </AppBar>
@@ -115,19 +148,53 @@ export default function NewsPage() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          ALL NEWS
-        </TabPanel>
+        <TabPanel
+          value={value}
+          index={0}
+          dir={theme.direction}
+          sx={{ display: "flex", fontFfamily: "Kanit, sans-serif;" }}
+        ></TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          CORPORATE
+          <ul>
+            <li>Finance</li>
+            <li>Ad-Hoc</li>
+            <li>Corporate</li>
+          </ul>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          PRODUCT AND BRAND
+          <ul id="products">
+            <li>Teamsport</li>
+            <li>Sportstyle</li>
+            <li>Running and Training</li>
+            <li>Running and Training</li>
+            <li>Golf</li>
+            <li>Basketball</li>
+            <li>Motorsport</li>
+            <li>Accessories and Licensing</li>
+          </ul>
         </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          VIRTUAL PRESS CONFERENCES
-        </TabPanel>
+        <TabPanel value={value} index={3} dir={theme.direction}></TabPanel>
       </SwipeableViews>
+      <TabPanel value={value} index={4} dir={theme.direction}>
+        <input type="number" min="1900" max="2099" step="1" value="2016" />
+      </TabPanel>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          // my: "1rem",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <NewCard></NewCard>
+        <NewCard></NewCard>
+        <NewCard></NewCard>
+        <NewCard></NewCard>
+        <NewCard></NewCard>
+        <NewCard></NewCard>
+        <NewCard></NewCard>
+        <NewCard></NewCard>
+      </Box>
     </Box>
   );
 }

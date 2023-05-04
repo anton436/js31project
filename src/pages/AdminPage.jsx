@@ -4,9 +4,7 @@ import AddProduct from "../components/Product/AddProduct";
 const AdminPage = () => {
   return (
     <div>
-      <AddProduct>
-        
-      </AddProduct>
+      <AddProduct />
     </div>
   );
 };
