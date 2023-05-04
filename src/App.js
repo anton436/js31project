@@ -12,7 +12,6 @@ const App = () => {
       <NavbarB />
       <Navbar />
       <NavTop />
-      <NavbarB />
       <ContactUs />
       <MainRoutes />
       <Footer />
