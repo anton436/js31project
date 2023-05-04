@@ -6,6 +6,7 @@ import AuthPage from "../pages/AuthPage";
 import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ProductsPage from "../pages/ProductsPage";
+import NewsPage from "../pages/NewsPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -15,6 +16,7 @@ const MainRoutes = () => {
     { link: "/admin", element: <AdminPage />, id: 4 },
     { link: "/about", element: <AboutUsPage />, id: 5 },
     { link: "*", element: <NotFoundPage />, id: 6 },
+    { link: "/news", element: <NewsPage />, id: 7 },
   ];
   return (
     <>

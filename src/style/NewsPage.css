@@ -1,0 +1,9 @@
+.tabs {
+  font-size: 100px;
+}
+.actve {
+  font-size: 100px;
+}
+#underline {
+  border-bottom: 1px red solid;
+}

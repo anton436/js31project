@@ -19,6 +19,7 @@ const pages = [
   { name: "Admin Panel", link: "/admin", id: 2 },
   { name: "Store", link: "/products", id: 3 },
   { name: "About Us", link: "/about", id: 4 },
+  { name: "NewsRoom", link: "/news", id: 5 },
 ];
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
