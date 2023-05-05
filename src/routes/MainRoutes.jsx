@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AboutUsPage from "../pages/AboutUsPage";
+
 import AdminPage from "../pages/AdminPage";
 import AuthPage from "../pages/AuthPage";
 import EditProductPage from "../pages/EditProductPage";
@@ -11,6 +11,7 @@ import ProductSmallCard from "../components/Product/ProductSmallCard";
 import ProductSmallCardPages from "../pages/ProductSmallCardPages";
 import ProductBigCard from "../components/Product/ProductBigCard";
 import CollectionPage from "../pages/CollectionPage";
+import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
