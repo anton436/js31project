@@ -4,7 +4,8 @@ import { useParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
 
 const EditProduct = () => {
-  const { addProduct, getProductDetails, productDetails } = useProducts();
+  const { saveEditedProduct, getProductDetails, productDetails } =
+    useProducts();
   console.log(productDetails);
 
   const { id } = useParams();
@@ -50,7 +51,7 @@ const EditProduct = () => {
           size="small"
           name="name"
           onChange={handleInp}
-          value={product.name}
+          value={product.name || ""}
         />
         <TextField
           sx={{ marginBottom: "10px" }}
@@ -61,7 +62,7 @@ const EditProduct = () => {
           size="small"
           name="description"
           onChange={handleInp}
-          value={product.description}
+          value={product.description || ""}
         />
         <TextField
           sx={{ marginBottom: "10px" }}
@@ -72,7 +73,7 @@ const EditProduct = () => {
           size="small"
           name="price"
           onChange={handleInp}
-          value={product.price}
+          value={product.price || ""}
         />
         <TextField
           sx={{ marginBottom: "10px" }}
@@ -83,7 +84,7 @@ const EditProduct = () => {
           size="small"
           name="picture"
           onChange={handleInp}
-          value={product.picture}
+          value={product.picture || ""}
         />
         <TextField
           sx={{ marginBottom: "10px" }}
@@ -94,10 +95,10 @@ const EditProduct = () => {
           size="small"
           name="type"
           onChange={handleInp}
-          value={product.type}
+          value={product.type || ""}
         />
         <Button
-          onClick={() => addProduct(product)}
+          onClick={() => saveEditedProduct(product)}
           fullWidth
           variant="outlined"
         >

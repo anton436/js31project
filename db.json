@@ -9,17 +9,17 @@
       "id": 2
     },
     {
-      "name": "title",
-      "description": "descr",
+      "name": "hello ",
+      "description": "qorlkd",
       "price": 2345,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
       "type": "hoodie",
       "id": 3
     },
     {
-      "name": "Emir",
-      "description": "aaa",
-      "price": 2345,
+      "name": "AIzhamal",
+      "description": "bbbb",
+      "price": 12345,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
       "type": "human",
       "id": 4

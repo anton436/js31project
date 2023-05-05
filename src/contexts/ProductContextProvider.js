@@ -55,6 +55,12 @@ const ProductContextProvider = ({ children }) => {
     });
   };
 
+  const saveEditedProduct = async (newProduct) => {
+    await axios.patch(`${JSON_API_PRODUCTS}/${newProduct.id}`, newProduct);
+    getProducts();
+    navigate("/products");
+  };
+
   const values = {
     addProduct,
     getProducts,
@@ -62,6 +68,7 @@ const ProductContextProvider = ({ children }) => {
     deleteProduct,
     getProductDetails,
     productDetails: state.productDetails,
+    saveEditedProduct,
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>
