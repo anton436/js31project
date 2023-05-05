@@ -37,7 +37,6 @@ const ProductContextProvider = ({ children }) => {
     await axios.post(JSON_API_PRODUCTS, newProduct);
     navigate("/products");
   };
-
   const deleteProduct = async (id) => {
     await axios.delete(`${JSON_API_PRODUCTS}/${id}`);
     getProducts();

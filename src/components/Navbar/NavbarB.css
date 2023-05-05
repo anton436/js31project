@@ -1,0 +1,32 @@
+.navbb {
+  background-size: 100% 100%;
+  display: flex;
+  background-color: rgb(201, 177, 130);
+  color: white;
+  font-size: 14px;
+  padding-top: 20px;
+}
+
+.top {
+  width: 70%;
+  margin: 0 auto;
+}
+.css-hyum1k-MuiToolbar-root {
+  min-height: 64px;
+  background-color: black;
+}
+.css-1oqqzyl-MuiContainer-root {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+.navtop {
+  color: black;
+  text-align: center;
+  background-color: rgb(248, 116, 191);
+  color: white;
+}
+.navtop h3 {
+  margin: 0;
+}
