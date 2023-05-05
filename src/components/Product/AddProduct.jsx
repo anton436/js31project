@@ -1,14 +1,16 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
-
+import { useProducts } from "../../contexts/ProductContextProvider";
 const AddProduct = () => {
+  const { addProduct } = useProducts();
   const [product, setProduct] = useState({
     name: "",
     description: "",
-    price: "",
+    price: 0,
     picture: "",
     type: "",
   });
+
   const handleInp = (e) => {
     if (e.target.name === "price") {
       let obj = {
@@ -24,7 +26,9 @@ const AddProduct = () => {
       setProduct(obj);
     }
   };
+
   console.log(product);
+
   return (
     <>
       <Box sx={{ width: "60vw", margin: "10vh auto" }}>
@@ -55,7 +59,8 @@ const AddProduct = () => {
           id="outlined-basic"
           label="price"
           variant="outlined"
-          size="price"
+          size="small"
+          name="price"
           onChange={handleInp}
         />
         <TextField
@@ -78,7 +83,11 @@ const AddProduct = () => {
           name="type"
           onChange={handleInp}
         />
-        <Button fullWidth variant="outlined">
+        <Button
+          onClick={() => addProduct(product)}
+          fullWidth
+          variant="outlined"
+        >
           Add Product
         </Button>
       </Box>

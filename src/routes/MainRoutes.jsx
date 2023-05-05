@@ -1,11 +1,17 @@
 import React from "react";
-import ProductsPage from "../pages/ProductsPage";
-import HomePage from "../pages/HomePage";
-import AuthPage from "../pages/AuthPage";
-import AdminPage from "../pages/AdminPage";
-import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
-import NotFoundPage from "../pages/NotFoundPage";
 import { Route, Routes } from "react-router-dom";
+
+import AdminPage from "../pages/AdminPage";
+import AuthPage from "../pages/AuthPage";
+import EditProductPage from "../pages/EditProductPage";
+import HomePage from "../pages/HomePage";
+import NotFoundPage from "../pages/NotFoundPage";
+import ProductsPage from "../pages/ProductsPage";
+import ProductSmallCard from "../components/Product/ProductSmallCard";
+import ProductSmallCardPages from "../pages/ProductSmallCardPages";
+import ProductBigCard from "../components/Product/ProductBigCard";
+import CollectionPage from "../pages/CollectionPage";
+import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -15,6 +21,8 @@ const MainRoutes = () => {
     { link: "/admin", element: <AdminPage />, id: 4 },
     { link: "/about", element: <AboutUsPage />, id: 5 },
     { link: "*", element: <NotFoundPage />, id: 6 },
+    { link: "/edit/:id", element: <EditProductPage />, id: 7 },
+    { link: "/collection", element: <CollectionPage />, id: 8 },
   ];
   return (
     <>
