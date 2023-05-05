@@ -1,33 +1,33 @@
+import { Box } from "@mui/material";
 import React, { useEffect } from "react";
-import { useProducts } from "../../context/ProductContextProvider";
-import { Box, Container } from "@mui/material";
+import { useProducts } from "../../contexts/ProductContextProvider";
 import ProductCard from "./ProductCard";
 
-function ProductList() {
-  const { getProducts, products } = useProducts();
+const ProductList = () => {
+  const { products, getProducts } = useProducts();
+
+  console.log(products);
+
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products);
+
   return (
     <>
-      <Container>
-        <Box
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            gap: "1em",
-            margin: "2em 0",
-          }}
-        >
-          {products.map((item) => (
-            <ProductCard key={item.id} item={item} />
-          ))}
-        </Box>
-      </Container>
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          my: "2rem",
+          justifyContent: "space-evenly",
+        }}
+      >
+        {products.map((item) => (
+          <ProductCard key={item.id} item={item} />
+        ))}
+      </Box>
     </>
   );
-}
+};
 
 export default ProductList;

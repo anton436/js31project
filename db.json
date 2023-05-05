@@ -1,68 +1,36 @@
 {
   "products": [
     {
-      "name": "sdfghk",
-      "description": "sdfgh",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "sdfg",
-      "id": 1
-    },
-    {
-      "name": "sdfg",
-      "description": "asdf",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "234567",
+      "name": "name",
+      "description": "some descr",
+      "price": 2345,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "phone",
       "id": 2
     },
     {
-      "name": "awert",
-      "description": "sdfg",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "sdfg",
+      "name": "hello ",
+      "description": "qorlkd",
+      "price": 2345,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "hoodie",
       "id": 3
     },
     {
-      "name": "awertxsdfghj",
-      "description": "sdfg",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "sdfg",
+      "name": "AIzhamal",
+      "description": "bbbb",
+      "price": 12345,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "human",
       "id": 4
     },
     {
-      "name": "awertxsdfghj",
-      "description": "sdfg",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "sdfg",
+      "name": "Adilet",
+      "description": "Gazybekov",
+      "price": 1000,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "human",
       "id": 5
-    },
-    {
-      "name": "cd",
-      "description": "xd",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "df",
-      "id": 6
-    },
-    {
-      "name": "sdmksdk",
-      "description": "s",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "s",
-      "id": 7
-    },
-    {
-      "name": "sdmksdk",
-      "description": "s",
-      "price": null,
-      "picture": "https://images.unsplash.com/photo-1661956601349-f61c959a8fd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
-      "type": "s",
-      "id": 8
     }
   ]
 }

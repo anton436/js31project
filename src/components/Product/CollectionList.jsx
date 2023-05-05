@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useProducts } from "../../context/ProductContextProvider";
+import { useProducts } from "../../contexts/ProductContextProvider";
 import ProductCard from "./ProductCard";
 import { Box } from "@mui/material";
 import ProductSmallCard from "./ProductSmallCard";
