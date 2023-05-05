@@ -41,19 +41,24 @@ const ProductContextProvider = ({ children }) => {
     await axios.post(JSON_API_PRODUCTS, newProduct);
     navigate("/products");
   };
+
   const deleteProduct = async (id) => {
     await axios.delete(`${JSON_API_PRODUCTS}/${id}`);
     getProducts();
   };
+
   const getProductDetails = async (id) => {
     const { data } = await axios(`${JSON_API_PRODUCTS}/${id}`);
-    dispatch({ type: ACTIONS.GET_PRODUCT_DETAILS, payload: data });
+    dispatch({
+      type: ACTIONS.GET_PRODUCT_DETAILS,
+      payload: data,
+    });
   };
 
   const saveEditedProduct = async (newProduct) => {
     await axios.patch(`${JSON_API_PRODUCTS}/${newProduct.id}`, newProduct);
     getProducts();
-    navigate(`/products`);
+    navigate("/products");
   };
 
   const values = {

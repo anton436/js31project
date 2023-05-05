@@ -6,8 +6,10 @@ import { useProducts } from "../../contexts/ProductContextProvider";
 const EditProduct = () => {
   const { saveEditedProduct, getProductDetails, productDetails } =
     useProducts();
+  console.log(productDetails);
 
   const { id } = useParams();
+
   useEffect(() => {
     getProductDetails(id);
   }, []);
@@ -33,6 +35,8 @@ const EditProduct = () => {
       setProduct(obj);
     }
   };
+
+  console.log(product);
 
   return (
     <>
