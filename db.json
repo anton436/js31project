@@ -1,12 +1,20 @@
 {
   "products": [
     {
-      "name": "2134",
-      "description": "12341234",
-      "price": 2345,
+      "name": "Adik",
+      "description": "1234",
+      "price": null,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
-      "type": "21345",
+      "type": "`1234",
       "id": 2
+    },
+    {
+      "name": "hello",
+      "description": "wer",
+      "price": null,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "qwert",
+      "id": 3
     }
   ]
 }

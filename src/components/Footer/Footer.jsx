@@ -82,7 +82,7 @@ const Footer = () => {
             <hr />
             <div className="div7">
               <img
-                class="p-footer-featured-icon"
+                className="p-footer-featured-icon"
                 src="https://eu.puma.com/on/demandware.static/-/Library-Sites-Shared-EEA/default/dw84ec825e/web-components/pumatrac-logo.svg"
                 alt="puma-trac"
               ></img>
@@ -92,16 +92,16 @@ const Footer = () => {
         </div>
 
         <div className="div8">
-          <select class="cars" id="cars">
+          <select className="cars" id="cars">
             <option value="English">English</option>
             <option value="Germany">Germany</option>
             <option value="Kyrgyz">Opel</option>
             <option value="audi">Audi</option>
           </select>
-          <p class="text1">© PUMA Europe GmbH, 2023. All Rights Reserved</p>
-          <div class="link__block">
-            <a class="text2">Cookies Settings</a>
-            <span class="text3">Imprint & Legal Data</span>
+          <p className="text1">© PUMA Europe GmbH, 2023. All Rights Reserved</p>
+          <div className="link__block">
+            <a className="text2">Cookies Settings</a>
+            <span className="text3">Imprint & Legal Data</span>
           </div>
         </div>
       </footer>

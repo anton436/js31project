@@ -11,12 +11,16 @@ export const useProducts = () => {
 
 const INIT_STATE = {
   products: [],
+  productDetails: {},
 };
 
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case ACTIONS.GET_PRODUCTS:
       return { ...state, products: action.payload };
+
+    case ACTIONS.GET_PRODUCT_DETAILS:
+      return { ...state, productDetails: action.payload };
 
     default:
       return state;
@@ -41,11 +45,25 @@ const ProductContextProvider = ({ children }) => {
     await axios.delete(`${JSON_API_PRODUCTS}/${id}`);
     getProducts();
   };
+  const getProductDetails = async (id) => {
+    const { data } = await axios(`${JSON_API_PRODUCTS}/${id}`);
+    dispatch({ type: ACTIONS.GET_PRODUCT_DETAILS, payload: data });
+  };
+
+  const saveEditedProduct = async (newProduct) => {
+    await axios.patch(`${JSON_API_PRODUCTS}/${newProduct.id}`, newProduct);
+    getProducts();
+    navigate(`/products`);
+  };
+
   const values = {
     addProduct,
     getProducts,
     products: state.products,
     deleteProduct,
+    getProductDetails,
+    productDetails: state.productDetails,
+    saveEditedProduct,
   };
   return (
     <productContext.Provider value={values}>{children}</productContext.Provider>

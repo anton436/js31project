@@ -6,8 +6,6 @@ import ProductCard from "./ProductCard";
 const ProductList = () => {
   const { products, getProducts } = useProducts();
 
-  console.log(products);
-
   useEffect(() => {
     getProducts();
   }, []);
