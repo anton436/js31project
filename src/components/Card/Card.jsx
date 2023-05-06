@@ -6,12 +6,13 @@ const API = "http://localhost:8000/card";
 
 const Card = () => {
   const [cards, setCards] = useState([]);
+  console.log(cards);
 
   const getCard = async () => {
     try {
       const response = await axios.get(API);
       setCards(response.data);
-      console.log(response.data);
+      console.log(response);
     } catch (error) {
       console.error(error);
     }
