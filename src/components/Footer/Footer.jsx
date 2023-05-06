@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="div3">
             <div className="div__foot5">
               <span>Sign up and get 20% off your first order</span>
-              <button className="btn1">Sign up for newsletter</button>
+              {/* <button className="btn1">Sign up for newsletter</button> */}
             </div>
             <div className="div_foot6">
               <span>More Inspiration</span>

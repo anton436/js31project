@@ -7,6 +7,7 @@ import EditProductPage from "../pages/EditProductPage";
 import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ProductsPage from "../pages/ProductsPage";
+import NewsPages from "../components/news_page/NewsPages";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -17,6 +18,7 @@ const MainRoutes = () => {
     { link: "/about", element: <AboutUsPage />, id: 5 },
     { link: "*", element: <NotFoundPage />, id: 6 },
     { link: "/edit/:id", element: <EditProductPage />, id: 7 },
+    { link: "/news", element: <NewsPages />, id: 8 },
   ];
   return (
     <>
