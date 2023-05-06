@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AboutUsPage from "../pages/AboutUsPage";
 import AdminPage from "../pages/AdminPage";
 import AuthPage from "../pages/AuthPage";
 import EditProductPage from "../pages/EditProductPage";
@@ -15,7 +14,6 @@ const MainRoutes = () => {
     { link: "/", element: <HomePage />, id: 2 },
     { link: "/auth", element: <AuthPage />, id: 3 },
     { link: "/admin", element: <AdminPage />, id: 4 },
-    { link: "/about", element: <AboutUsPage />, id: 5 },
     { link: "*", element: <NotFoundPage />, id: 6 },
     { link: "/edit/:id", element: <EditProductPage />, id: 7 },
     { link: "/news", element: <NewsPages />, id: 8 },

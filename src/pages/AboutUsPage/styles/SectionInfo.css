@@ -1,0 +1,53 @@
+.container {
+  height: 100vh;
+  background-image: url(../assets/bg-section.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5em;
+}
+#bgIMG {
+  display: none;
+  width: 100%;
+}
+.container h2 {
+  color: white;
+  font-size: 2.4em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+.container button {
+  padding: 1.4em 4em;
+  margin-top: 3em;
+  border: 1px solid white;
+  transition: 0.2s;
+  background: #00000000;
+  width: 280px;
+}
+.container button:hover {
+  background-color: white;
+  transform: scaleY(0.2s);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: auto;
+    background-image: none;
+    padding: 0 1rem;
+  }
+  .container h2 {
+    color: black;
+  }
+  .container p {
+    color: black;
+  }
+  #bgIMG {
+    display: block;
+  }
+}

@@ -71,6 +71,8 @@ export default function Navbar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+  let arr = ["Woman", "Men", "Kids", "Collection", "Sports", "Sale"];
+
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -201,13 +203,9 @@ export default function Navbar() {
                 display: "flex",
               }}
             >
-              <h5 style={{ marginRight: "10px" }}>Woman</h5>
-              <h5 style={{ marginRight: "10px" }}>Men</h5>
-              <h5 style={{ marginRight: "10px" }}>Kids</h5>
-              <h5 style={{ marginRight: "10px" }}>Collection</h5>
-              <h5 style={{ marginRight: "10px" }}>Sports</h5>
-              <h5 style={{ marginRight: "10px" }}>Sale</h5>
-              <h5 style={{ marginRight: "10px" }}>NEWSROOM Б</h5>
+              {arr.map((item) => (
+                <h5 style={{ marginRight: "10px" }}>{item}</h5>
+              ))}
             </div>
           </Typography>
 

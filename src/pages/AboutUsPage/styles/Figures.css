@@ -1,0 +1,50 @@
+.figContainer {
+  width: 92vw;
+  margin: 0 auto;
+  padding: 1.5em 3em;
+}
+
+.text__container {
+  display: flex;
+  justify-content: center;
+  margin: 4em auto;
+}
+
+#h2 {
+  margin-top: 1em;
+  font-size: 45px;
+  line-height: 48px;
+  letter-spacing: -2px;
+  font-weight: 600;
+  word-wrap: break-word;
+  margin-bottom: 18px;
+}
+
+.block__text {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.block__text:last-child {
+  width: 220px;
+}
+
+.block__text h3 {
+  font-size: 4em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(29, 29, 29);
+  margin: 0;
+}
+.block__text h5 {
+  margin: 0;
+  font-size: 1.6em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(58, 58, 58);
+}
+
+@media screen and (max-width: 768px) {
+  .text__container {
+    flex-wrap: wrap;
+  }
+}
