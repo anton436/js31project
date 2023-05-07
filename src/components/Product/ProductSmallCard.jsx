@@ -32,7 +32,7 @@ export default function ProductSmallCard({ item }) {
               right: "5px",
             }}
           >
-            <i class="fa-solid fa-arrow-right"></i>
+            <i className="fa-solid fa-arrow-right"></i>
           </span>
           <span
             style={{
@@ -42,7 +42,7 @@ export default function ProductSmallCard({ item }) {
               left: "5px",
             }}
           >
-            <i class="fa-solid fa-arrow-left"></i>
+            <i className="fa-solid fa-arrow-left"></i>
           </span>
         </div>
         <div style={{ margin: "5em 0" }}>
