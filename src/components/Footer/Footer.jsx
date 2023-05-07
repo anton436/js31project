@@ -142,7 +142,7 @@ const Footer = () => {
               src="https://eu.puma.com/on/demandware.static/Sites-EU-Site/-/default/dw5897ebfc/flags/de.svg"
               alt=""
             />
-            <select name="" id="selected">
+            <select name="" id="selected2">
               <option value="Кыргызский">Кыргызский</option>
               <option value="Русский">Русский</option>
               <option value="English">English</option>
