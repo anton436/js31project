@@ -16,6 +16,20 @@ const NewsPages = () => {
               <li>VIRTUAL PRESS CONFERENCES</li>
             </ul>
           </div>
+          <div className="newsroom-filter-responsive">
+            <select
+              name=""
+              id="newsroom-years-res"
+              className="newsroom-categories-res"
+            >
+              <option value="ALL News">ALL News</option>
+              <option value="Corporate">Corporate</option>
+              <option value="Product and Brand">Product and Brand</option>
+              <option value="VIRTUAL PRESS CONFERENCES">
+                VIRTUAL PRESS CONFERENCES
+              </option>
+            </select>
+          </div>
           {/* <div className="newsroom-search">
             <div className="search-field ">
               <input type="text" placeholder="Enter your search here..." />
@@ -63,7 +77,6 @@ const NewsPages = () => {
         </div>
       </div>
       <Card></Card>
-      <button className="btn_news">LOAD MORE</button>
     </div>
   );
 };

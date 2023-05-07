@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import "./Card.css";
 
-const API = "http://localhost:8000/card";
+const API = "http://localhost:8003/card";
 
 const Card = () => {
   const [cards, setCards] = useState([]);
@@ -36,6 +36,7 @@ const Card = () => {
           </div>
         ))}
       </div>
+      <button className="btn_news">LOAD MORE</button>
     </div>
   );
 };

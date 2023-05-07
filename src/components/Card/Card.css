@@ -60,3 +60,30 @@ p {
   ); /* Пример цвета наложения (красный с прозрачностью) */
   filter: brightness(20%) hue-rotate(10deg);
 }
+.btn_news {
+  background-color: white;
+  padding: 23px 44px;
+  border: 1px solid;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  font-family: "DINPro", sans-serif;
+  margin: auto;
+  display: block;
+}
+
+.btn_news:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .main_card-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .card {
+    width: 320px;
+    height: 380px;
+    position: relative;
+  }
+}
