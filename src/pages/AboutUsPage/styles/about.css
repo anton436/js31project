@@ -321,3 +321,8 @@ body {
     width: 15rem;
   }
 }
+@media screen and (max-width: 1300px) {
+  .imgWrong {
+    display: none;
+  }
+}

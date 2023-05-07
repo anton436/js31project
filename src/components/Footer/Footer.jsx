@@ -9,99 +9,151 @@ const Footer = () => {
   return (
     <div>
       <footer>
-        <div className="footer__top">
-          <div className="div1">
-            <div className="div_foot1">
-              <span>Support</span>
-              <hr />
-              <a href="#">Contact us</a>
-              <a href="#">FAQ</a>
-              <a href="#">Check Gift Card balance</a>
-              <a href="#">Purchase a Gift Card</a>
-              <a href="#">Check Order</a>
-              <a href="#">Delivery</a>
-              <a href="#">Find a Store</a>
-              <a href="#">Size Guide</a>
+        <div className="footer__container">
+          <div className="footer__left">
+            <div className="support1">
+              <div className="first">
+                <span>Support</span>
+              </div>
+              <div className="support">
+                <div className="support__left">
+                  <a className="support__a" href="#">
+                    Contact us
+                  </a>
+                  <a className="support__a" href="#">
+                    FAQ
+                  </a>
+                  <a className="support__a" href="#">
+                    Check Gift Card balance
+                  </a>
+                  <a className="support__a" href="#">
+                    Purchase a Gift Card
+                  </a>
+                  <a className="support__a" href="#">
+                    Check Order
+                  </a>
+                  <a className="support__a" href="#">
+                    Delivery
+                  </a>
+                  <a className="support__a" href="#">
+                    Find a Store
+                  </a>
+                  <a className="support__a" href="#">
+                    Size Guide
+                  </a>
+                </div>
+                <div className="support__left">
+                  <a className="support__a" href="#">
+                    Return Policy
+                  </a>
+                  <a className="support__a" href="#">
+                    Privacy Policy
+                  </a>
+                  <a className="support__a" href="#">
+                    Terms & Conditions
+                  </a>
+                  <a className="support__a" href="#">
+                    Right of Withdrawal
+                  </a>
+                  <a className="support__a" href="#">
+                    *Promotions & Sale
+                  </a>
+                  <a className="support__a" href="#">
+                    Student Discount
+                  </a>
+                  <a className="support__a" href="#">
+                    Refer A Friend
+                  </a>
+                  <a className="support__a" href="#">
+                    Become an Affiliate Partner
+                  </a>
+                </div>
+              </div>
             </div>
-            <div className="div_foot2">
-              <a href="#">Return Policy</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms & Conditions</a>
-              <a href="#">Right of Withdrawal</a>
-              <a href="#">*Promotions & Sale</a>
-              <a href="#">Student Discount</a>
-              <a href="#">Refer A Friend</a>
-              <a href="#">Become an Affiliate Partner</a>
+            <div className="about1">
+              <div className="first">
+                <span>About Puma</span>
+              </div>
+              <div className="about__puma">
+                <div className="about__puma__right">
+                  <a className="support__a" href="">
+                    Company
+                  </a>
+                  <a className="support__a" href="">
+                    Corporate News
+                  </a>
+                  <a className="support__a" href="">
+                    Press Center
+                  </a>
+                </div>
+                <div className="about__puma__right">
+                  <a className="support__a" href="">
+                    Investors
+                  </a>
+                  <a className="support__a" href="">
+                    Sustainability
+                  </a>
+                  <a className="support__a" href="">
+                    Careers
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="div2">
-            <div className="div_foot3">
-              <span>About PUMA</span>
-              <hr />
-              <a href="#">Company</a>
-              <a href="#">Corporate News</a>
-              <a href="#">Press Center</a>
-            </div>
-            <div className="div_foot4">
-              <a href="#">Investors</a>
-              <a href="#">Sustainability</a>
-              <a href="#">Careers</a>
-            </div>
-          </div>
-          <div className="div3">
-            <div className="div__foot5">
+          <div className="footer__right">
+            <div className="right1">
               <span>Sign up and get 20% off your first order</span>
-              <button className="btn1">Sign up for newsletter</button>
+              <button>Sign up for newsletter</button>
             </div>
-            <div className="div_foot6">
-              <span>More Inspiration</span>
-              <hr />
+            <div className="right2">
+              <div className="first">
+                <span>More Inspiration</span>
+              </div>
               <div className="icons">
-                <a target="_blank" href="#">
-                  {" "}
-                  <img style={{ width: "25px" }} src={Facebook} alt="" />{" "}
+                <a href="">
+                  <img src={Facebook} alt="" />
                 </a>
-                <a target="_blank" href="#">
-                  {" "}
-                  <img style={{ width: "25px" }} src={Twitter} alt="" />
+                <a href="">
+                  <img src={Twitter} alt="" />
                 </a>
-                <a target="_blank" href="#">
-                  {" "}
-                  <img style={{ width: "25px" }} src={Insta} alt="" />
+                <a href="">
+                  <img src={Insta} alt="" />
                 </a>
-                <a target="_blank" href="#">
-                  {" "}
-                  <img style={{ width: "25px" }} src={Pinterest} alt="" />
+                <a href="">
+                  <img src={Pinterest} alt="" />
                 </a>
-                <a target="_blank" href="#">
-                  {" "}
-                  <img style={{ width: "25px" }} src={Youtube} alt="" />
+                <a href="">
+                  <img src={Youtube} alt="" />
                 </a>
               </div>
             </div>
-            <hr />
-            <div className="div7">
+            <div className="right3 right__a">
               <img
-                className="p-footer-featured-icon"
                 src="https://eu.puma.com/on/demandware.static/-/Library-Sites-Shared-EEA/default/dw84ec825e/web-components/pumatrac-logo.svg"
-                alt="puma-trac"
-              ></img>
-              <span id="span">Train with the fastest</span>
+                alt=""
+              />
+              <span id="spanb">Train with the fastest</span>
             </div>
           </div>
         </div>
-
-        <div className="div8">
-          <select className="cars" id="cars">
-            <option value="English">English</option>
-            <option value="Germany">Germany</option>
-            <option value="Kyrgyz">Opel</option>
-            <option value="audi">Audi</option>
-          </select>
-          <p className="text1">© PUMA Europe GmbH, 2023. All Rights Reserved</p>
-          <div className="link__block">
-            <a className="text2">Cookies Settings</a>
-            <span className="text3">Imprint & Legal Data</span>
+        <div className="footer__bottom">
+          <div className="option">
+            <img
+              src="https://eu.puma.com/on/demandware.static/Sites-EU-Site/-/default/dw5897ebfc/flags/de.svg"
+              alt=""
+            />
+            <select name="" id="selected">
+              <option value="Кыргызский">Кыргызский</option>
+              <option value="Русский">Русский</option>
+              <option value="English">English</option>
+            </select>
+          </div>
+          <div className="span">
+            <span>© PUMA Europe GmbH, 2023. All Rights Reserved</span>
+          </div>
+          <div className="span2">
+            <span>Cookies Settings</span>
+            <span id="span2">Imprint & Legal Data</span>
           </div>
         </div>
       </footer>

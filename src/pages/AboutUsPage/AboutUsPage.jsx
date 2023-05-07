@@ -80,6 +80,7 @@ const AboutUsPage = () => {
               alt="ph1"
             />
             <img
+              className="imgWrong"
               style={{ width: "356px", height: "445px" }}
               src="https://cdn.about.puma.com/-/media/images/this-is-puma/quote_yaroslava.jpg?as=1&h=1280&iar=1&w=1024&rev=c890a9430eca4cdb8f301af1c1e1477b&hash=D7F77AEE66F736BB383B8F008D359126"
             />

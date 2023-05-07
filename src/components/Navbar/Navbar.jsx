@@ -196,8 +196,10 @@ export default function Navbar() {
                 display: "flex",
               }}
             >
-              {arr.map((item) => (
-                <h5 style={{ marginRight: "10px" }}>{item}</h5>
+              {arr.map((item, index) => (
+                <h5 key={index} style={{ marginRight: "10px" }}>
+                  {item}
+                </h5>
               ))}
             </div>
           </Typography>
