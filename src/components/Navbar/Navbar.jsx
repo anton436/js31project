@@ -19,6 +19,13 @@ import { useAuth } from "../../contexts/AuthContextProvider";
 import { useNavigate } from "react-router-dom";
 import { MenuList } from "@mui/material";
 
+const pages = [
+  { name: "Home", link: "/", id: 1 },
+  { name: "Admin Panel", link: "/admin", id: 2 },
+  { name: "Store", link: "/products", id: 3 },
+  { name: "About Us", link: "/about", id: 4 },
+  { name: "NewsRoom", link: "/news", id: 5 },
+];
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,

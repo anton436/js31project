@@ -1,7 +1,16 @@
+@font-face {
+  font-family: "DancingScript";
+  src: local("DancingScript"),
+    url("./components/fonts/DIN Pro/dinpro_condensedregular.otf")
+      format("truetype");
+  font-weight: "regular";
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "DIN Pro", sans-serif;
+  font-weight: 200;
 }
 
 ul,
