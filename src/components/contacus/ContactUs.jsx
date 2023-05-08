@@ -4,7 +4,7 @@ import "../Navbar/NavbarB.css";
 const ContactUs = () => {
   return (
     <div className="top">
-      <h1>Contact us</h1>
+      {/* <h1>Contact us</h1>
       <h5>Got questions or suggestions? Get in touch.</h5>
       <h6 style={{ textDecoration: "underline", fontSize: "15px" }}>
         CUSTOMER SERVICE
@@ -45,7 +45,7 @@ const ContactUs = () => {
           <p>Talk to us Monday to Friday from 9 am to 5 pm</p>
           <p>Make sure your browser allows pop-ups</p>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 };

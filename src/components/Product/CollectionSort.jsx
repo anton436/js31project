@@ -15,13 +15,16 @@ const CollectionSort = () => {
         <div className="sortFlex">
           <div className="leftSide">
             <div className="sortIcon">
-              <i class="fa-solid fa-sliders" style={{ color: "#000000" }}></i>
+              <i
+                className="fa-solid fa-sliders"
+                style={{ color: "#000000" }}
+              ></i>
             </div>
             <button className="sortButtons">
               Price{" "}
               <div className="btnIcon">
                 <i
-                  class="fa-solid fa-angle-down"
+                  className="fa-solid fa-angle-down"
                   style={{ color: "#000000" }}
                 ></i>
               </div>
@@ -30,7 +33,7 @@ const CollectionSort = () => {
               Collection{" "}
               <div className="btnIcon">
                 <i
-                  class="fa-solid fa-angle-down"
+                  className="fa-solid fa-angle-down"
                   style={{ color: "#000000" }}
                 ></i>
               </div>
@@ -39,7 +42,7 @@ const CollectionSort = () => {
               Size{" "}
               <div className="btnIcon">
                 <i
-                  class="fa-solid fa-angle-down"
+                  className="fa-solid fa-angle-down"
                   style={{ color: "#000000" }}
                 ></i>
               </div>
@@ -48,7 +51,7 @@ const CollectionSort = () => {
               Age{" "}
               <div className="btnIcon">
                 <i
-                  class="fa-solid fa-angle-down"
+                  className="fa-solid fa-angle-down"
                   style={{ color: "#000000" }}
                 ></i>
               </div>
@@ -57,7 +60,7 @@ const CollectionSort = () => {
               Product Category{" "}
               <div className="btnIcon">
                 <i
-                  class="fa-solid fa-angle-down"
+                  className="fa-solid fa-angle-down"
                   style={{ color: "#000000" }}
                 ></i>
               </div>
@@ -66,7 +69,7 @@ const CollectionSort = () => {
               Colour{" "}
               <div className="btnIcon">
                 <i
-                  class="fa-solid fa-angle-down"
+                  className="fa-solid fa-angle-down"
                   style={{ color: "#000000" }}
                 ></i>
               </div>
