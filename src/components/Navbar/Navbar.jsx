@@ -15,6 +15,9 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import { useNavigate } from "react-router-dom";
+import { MenuList } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -61,6 +64,12 @@ export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+  const {
+    handleLogout,
+    user: { email },
+  } = useAuth();
+  const navigate = useNavigate();
+
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -100,8 +109,21 @@ export default function Navbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      {email ? (
+        <MenuList>
+          <MenuItem>hello, {email}!</MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleLogout();
+              handleMenuClose();
+            }}
+          >
+            Logout
+          </MenuItem>
+        </MenuList>
+      ) : (
+        <MenuItem onClick={() => navigate("/auth")}>Login</MenuItem>
+      )}
     </Menu>
   );
 

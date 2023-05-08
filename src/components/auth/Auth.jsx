@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useAuth } from "../../contexts/AuthContextProvider";
+import { useNavigate } from "react-router-dom";
 
 function Copyright(props) {
   return (
@@ -47,7 +48,12 @@ export default function Auth() {
     setEmail,
     setPassword,
     setHasAccount,
+
+    handleSignUp,
+    handleLogin,
   } = useAuth();
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -99,6 +105,9 @@ export default function Auth() {
               name="email"
               autoComplete="email"
               autoFocus
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              helperText={emailError}
             />
             <TextField
               margin="normal"
@@ -109,6 +118,9 @@ export default function Auth() {
               type="password"
               id="password"
               autoComplete="current-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              helperText={passwordError}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -121,6 +133,9 @@ export default function Auth() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={() => {
+                  handleLogin();
+                }}
               >
                 Log In
               </Button>
@@ -130,6 +145,9 @@ export default function Auth() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
+                onClick={() => {
+                  handleSignUp();
+                }}
               >
                 Register
               </Button>
