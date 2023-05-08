@@ -73,7 +73,14 @@ export default function Navbar() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  let arr = ["Woman", "Men", "Kids", "Collection", "Sports", "Sale"];
+  let arr = [
+    { title: "Woman", key: 1 },
+    { title: "Men", key: 2 },
+    { title: "Kids", key: 3 },
+    { title: "Collection", key: 4 },
+    { title: "Sports", key: 5 },
+    { title: "Sale", key: 6 },
+  ];
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -218,9 +225,13 @@ export default function Navbar() {
                 display: "flex",
               }}
             >
-              {arr.map((item, index) => (
-                <h5 key={index} style={{ marginRight: "10px" }}>
-                  {item}
+              {arr.map((item) => (
+                <h5
+                  onClick={() => navigate(`/${item.title}`)}
+                  key={item.key}
+                  style={{ marginRight: "10px", cursor: "pointer" }}
+                >
+                  {item.title}
                 </h5>
               ))}
             </div>
