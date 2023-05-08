@@ -30,8 +30,9 @@ const AuthContextProvider = ({ children }) => {
       .createUserWithEmailAndPassword(email, password)
       .then(() => navigate("/"))
       .catch((err) => {
+        console.log(err);
         switch (err.code) {
-          case "auth/email-alredy-in-use":
+          case "auth/email-already-in-use":
           case "auth/invalid-email":
             setEmailError(err.message);
             break;
@@ -81,18 +82,24 @@ const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     authListener();
   }, []);
+
   console.log(user);
+
   const values = {
-    user,
     email,
     password,
+    user,
+
     emailError,
     passwordError,
     hasAccount,
+
     setEmail,
     setPassword,
     setHasAccount,
+
     handleSignUp,
+    handleLogin,
     handleLogout,
   };
   return <authContext.Provider value={values}>{children}</authContext.Provider>;

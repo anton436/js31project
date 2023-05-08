@@ -15,8 +15,8 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
-import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContextProvider";
+import { Link, useNavigate } from "react-router-dom";
 import { MenuList } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
@@ -111,7 +111,7 @@ export default function Navbar() {
     >
       {email ? (
         <MenuList>
-          <MenuItem>hello,{email}!</MenuItem>
+          <MenuItem>hello, {email}!</MenuItem>
           <MenuItem
             onClick={() => {
               handleLogout();
@@ -219,11 +219,9 @@ export default function Navbar() {
               }}
             >
               {arr.map((item, index) => (
-                <Link to={"/collection"}>
-                  <h5 key={index} style={{ marginRight: "10px" }}>
-                    {item}
-                  </h5>
-                </Link>
+                <h5 key={index} style={{ marginRight: "10px" }}>
+                  {item}
+                </h5>
               ))}
             </div>
           </Typography>

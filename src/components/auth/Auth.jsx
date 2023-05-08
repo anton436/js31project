@@ -37,19 +37,24 @@ const theme = createTheme();
 
 export default function Auth() {
   const {
-    user,
     email,
     password,
+    user,
+
     emailError,
     passwordError,
     hasAccount,
+
     setEmail,
     setPassword,
     setHasAccount,
+
     handleSignUp,
     handleLogin,
   } = useAuth();
+
   const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -159,7 +164,7 @@ export default function Auth() {
                     variant="body2"
                     onClick={() => setHasAccount(!hasAccount)}
                   >
-                    {"Don't have an account? register Now"}
+                    {"Don't have an account? Register Now"}
                   </Link>
                 ) : (
                   <Link
@@ -167,7 +172,7 @@ export default function Auth() {
                     variant="body2"
                     onClick={() => setHasAccount(!hasAccount)}
                   >
-                    {"Alredy have an account? Login"}
+                    {"Already have an account? Login"}
                   </Link>
                 )}
               </Grid>
