@@ -103,7 +103,7 @@ const Footer = () => {
           <div className="footer__right">
             <div className="right1">
               <span>Sign up and get 20% off your first order</span>
-              <button>Sign up for newsletter</button>
+              <button className="btn1">Sign up for newsletter</button>
             </div>
             <div className="right2">
               <div className="first">
