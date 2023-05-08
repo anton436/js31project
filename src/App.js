@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar";
 import NavbarB from "./components/Navbar/NavbarB";
 import NavTop from "./components/Navbar/NavTop";
 import MainRoutes from "./routes/MainRoutes";
+import NavTop from "./components/Navbar/NavTop";
 
 const App = () => {
   return (
