@@ -74,12 +74,12 @@ export default function Navbar() {
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   let arr = [
-    { title: "Woman", key: 1 },
-    { title: "Men", key: 2 },
-    { title: "Kids", key: 3 },
-    { title: "Collection", key: 4 },
-    { title: "Sports", key: 5 },
-    { title: "Sale", key: 6 },
+    { title: "Woman", key: 1, link: "woman" },
+    { title: "Men", key: 2, link: "men" },
+    { title: "Kids", key: 3, link: "kids" },
+    { title: "Collection", key: 4, link: "collection" },
+    { title: "Sports", key: 5, link: "sports" },
+    { title: "Sale", key: 6, link: "sale" },
   ];
 
   const handleProfileMenuOpen = (event) => {
@@ -227,7 +227,7 @@ export default function Navbar() {
             >
               {arr.map((item) => (
                 <h5
-                  onClick={() => navigate(`/${item.title}`)}
+                  onClick={() => navigate(`/${item.link}`)}
                   key={item.key}
                   style={{ marginRight: "10px", cursor: "pointer" }}
                 >
