@@ -15,6 +15,9 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
+import { useAuth } from "../../contexts/AuthContextProvider";
+import { useNavigate } from "react-router-dom";
+import { MenuList } from "@mui/material";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -61,10 +64,23 @@ export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+  const {
+    handleLogout,
+    user: { email },
+  } = useAuth();
+  const navigate = useNavigate();
+
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  let arr = ["Woman", "Men", "Kids", "Collection", "Sports", "Sale"];
+  let arr = [
+    { title: "Woman", key: 1 },
+    { title: "Men", key: 2 },
+    { title: "Kids", key: 3 },
+    { title: "Collection", key: 4 },
+    { title: "Sports", key: 5 },
+    { title: "Sale", key: 6 },
+  ];
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -100,8 +116,21 @@ export default function Navbar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+      {email ? (
+        <MenuList>
+          <MenuItem>hello, {email}!</MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleLogout();
+              handleMenuClose();
+            }}
+          >
+            Logout
+          </MenuItem>
+        </MenuList>
+      ) : (
+        <MenuItem onClick={() => navigate("/auth")}>Login</MenuItem>
+      )}
     </Menu>
   );
 
@@ -196,9 +225,13 @@ export default function Navbar() {
                 display: "flex",
               }}
             >
-              {arr.map((item, index) => (
-                <h5 key={index} style={{ marginRight: "10px" }}>
-                  {item}
+              {arr.map((item) => (
+                <h5
+                  onClick={() => navigate(`/${item.title}`)}
+                  key={item.key}
+                  style={{ marginRight: "10px", cursor: "pointer" }}
+                >
+                  {item.title}
                 </h5>
               ))}
             </div>
