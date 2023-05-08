@@ -6,12 +6,15 @@ import { BrowserRouter } from "react-router-dom";
 import ProductContextProvider from "./contexts/ProductContextProvider";
 import './components/fonts/DIN Pro/dinpro_light.otf'
 import './components/fonts/DIN Pro/dinpro_condensedregular.otf'
+import AuthContextProvider from "./contexts/AuthContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <ProductContextProvider>
-      <App />
-    </ProductContextProvider>
+    <AuthContextProvider>
+      <ProductContextProvider>
+        <App />
+      </ProductContextProvider>
+    </AuthContextProvider>
   </BrowserRouter>
 );
