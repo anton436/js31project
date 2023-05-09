@@ -16,7 +16,7 @@ import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
 import { useAuth } from "../../contexts/AuthContextProvider";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MenuList } from "@mui/material";
 
 const pages = [
@@ -264,15 +264,18 @@ export default function Navbar() {
                 <ChatIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 1 new mails"
-              color="inherit"
-            >
-              <Badge badgeContent={1} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
+
+            <Link to="/cart">
+              <IconButton
+                size="large"
+                aria-label="show 1 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={1} color="error">
+                  <ShoppingCartIcon sx={{ color: "white" }} />
+                </Badge>
+              </IconButton>
+            </Link>
 
             <IconButton
               size="large"

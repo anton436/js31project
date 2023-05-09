@@ -13,6 +13,7 @@ import ProductBigCard from "../components/Product/ProductBigCard";
 import CollectionPage from "../pages/CollectionPage";
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
 import NewsPages from "../components/news_page/NewsPages";
+import CartPage from "../pages/CartPage";
 
 const MainRoutes = () => {
   const PUBLIC_ROUTES = [
@@ -25,6 +26,7 @@ const MainRoutes = () => {
     { link: "/edit/:id", element: <EditProductPage />, id: 7 },
     { link: "/collection", element: <CollectionPage />, id: 8 },
     { link: "/news", element: <NewsPages />, id: 9 },
+    { link: "/cart", element: <CartPage />, id: 10 },
   ];
   return (
     <>
