@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useCart } from "../../contexts/CartContextProvider";
+import { Button } from "@mui/material";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -21,8 +22,9 @@ const rows = [
 ];
 
 export default function Cart() {
-  const { getCart } = useCart();
+  const { getCart, cart, changeProductCount } = useCart();
 
+  console.log(cart);
   React.useEffect(() => {
     getCart();
   }, []);
@@ -32,30 +34,48 @@ export default function Cart() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>Dessert (100g serving)</TableCell>
-            <TableCell align="right">Calories</TableCell>
-            <TableCell align="right">Fat&nbsp;(g)</TableCell>
-            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+            <TableCell>Picture</TableCell>
+            <TableCell align="right">Name</TableCell>
+            <TableCell align="right">Type</TableCell>
+            <TableCell align="right">Description</TableCell>
+            <TableCell align="right">Price</TableCell>
+            <TableCell align="right">Count</TableCell>
+            <TableCell align="right">SubPrice</TableCell>
+            <TableCell align="right">-</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {cart?.products.map((row) => (
             <TableRow
               key={row.name}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                <img src={row.item.picture} width="70" height="70" alt="" />
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
+              <TableCell align="right">{row.item.name}</TableCell>
+              <TableCell align="right">{row.item.type}</TableCell>
+              <TableCell align="right">{row.item.description}</TableCell>
+              <TableCell align="right">{row.item.price}</TableCell>
+              <TableCell align="right">
+                <input
+                  type="number"
+                  onChange={(e) =>
+                    changeProductCount(e.target.value, row.item.id)
+                  }
+                  value={row.count}
+                  min={1}
+                />
+              </TableCell>
+              <TableCell align="right">{row.subPrice}</TableCell>
+              <TableCell align="right">
+                <button>DELETE</button>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
+      <Button> BUY NOW FOR {cart?.totalPrice} $</Button>
     </TableContainer>
   );
 }
