@@ -5,7 +5,7 @@
       "description": "some descr",
       "price": 2345,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
-      "type": "phone",
+      "type": "female",
       "id": 2
     },
     {
@@ -13,7 +13,7 @@
       "description": "qorlkd",
       "price": 456,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
-      "type": "hoodie",
+      "type": "male",
       "id": 3
     },
     {
@@ -21,7 +21,7 @@
       "description": "bbbb",
       "price": 12345,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
-      "type": "human",
+      "type": "other",
       "id": 4
     },
     {
@@ -29,7 +29,7 @@
       "description": "Gazybekov",
       "price": 1000,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
-      "type": "human",
+      "type": "female",
       "id": 5
     },
     {
@@ -37,7 +37,7 @@
       "description": "sg",
       "price": 436,
       "picture": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUWFRgVFRUZGRgaGRoaGhwYGhgaGBwYGBoaGRgZGRocIS4lHCErHxgYJjgnKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHzQrISs0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NP/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAECAwUGBwj/xAA7EAABAwIDBQYEBQQBBQEAAAABAAIRAyEEEjEFQVFhcSKBkaGx8BMywdEGFEJS4WJykvEjBxWCstKi/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAECAwQF/8QAIhEAAgIDAQACAwEBAAAAAAAAAAECEQMhMRJBUQQTInFh/9oADAMBAAIRAxEAPwD2ZJRBToAdJRToARTBIlMECJIfG1clN7v2tJ8AiFk/iV5bhapH7D52SfBrp5KyXvdca6lGtZH8z4hBbNYS6xGu9b/5R0ajx+q5Umeg6WgRrxyPEaTzE6FG4HGFhEXbw3jkR9kLUoHfl8QfKEjRAuDB/wAR52S2LTOqpVgRmBlvp18lY9u9cxgcc5jr/KbHeI6rbdjAxucdphP+JO7otI5Pswljaeix7VU8KyjimPuCmqCBK0tPhm00UEJoTF40lOXwJSAUJQqqtWB1UDViL7yPBABCeEL8bXkU7K9h3+SACYTtGp93VXxArC+G9f8AQ+qAGhIhM1wT6oAjCcNUoVr3NpjM/wCY6NUykkhqLZFlMAZnWHmegQtfGO0b2R71Q1fHOed8eSqaZN3dw/jRZX6N1HyEtZIk+J1VeCePiZdZB3yk+pIgHqJjxO5DYAn4w6qvVNJB5uLD30lQ+itFzFAsW5ymYaKm2ijvhJ200ADspK0UkQxisyIEdkCpquUxK1JLJSlVlyQKKAmSpNVUqxqQE1j/AIsbOErcm",
-      "type": "awf",
+      "type": "male",
       "id": 6
     }
   ]
