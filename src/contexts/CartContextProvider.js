@@ -113,12 +113,25 @@ const CartContextProvider = ({ children }) => {
     });
   };
 
+  const deleteCartProduct = (id) => {
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    cart.products = cart.products.filter((elem) => elem.item.id !== id);
+    cart.totalPrice = calcTotalPrice(cart.products);
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    dispatch({
+      type: CART.GET_CART,
+      payload: cart,
+    });
+  };
+
   const values = {
     getCart,
     addProductToCart,
     checkProductInCart,
     cart: state.cart,
     changeProductCount,
+    deleteCartProduct,
   };
   return <cartContext.Provider value={values}>{children}</cartContext.Provider>;
 };

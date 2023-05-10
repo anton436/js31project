@@ -22,12 +22,17 @@ const rows = [
 ];
 
 export default function Cart() {
-  const { getCart, cart, changeProductCount } = useCart();
+  const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
 
   console.log(cart);
   React.useEffect(() => {
     getCart();
   }, []);
+
+  const cartCleaner = () => {
+    localStorage.removeItem("cart");
+    getCart();
+  };
 
   return (
     <TableContainer component={Paper}>
@@ -69,7 +74,9 @@ export default function Cart() {
               </TableCell>
               <TableCell align="right">{row.subPrice}</TableCell>
               <TableCell align="right">
-                <button>DELETE</button>
+                <button onClick={() => deleteCartProduct(row.item.id)}>
+                  DELETE
+                </button>
               </TableCell>
             </TableRow>
           ))}
