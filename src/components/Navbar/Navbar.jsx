@@ -18,6 +18,10 @@ import ChatIcon from "@mui/icons-material/Chat";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { Link, useNavigate } from "react-router-dom";
 import { MenuList } from "@mui/material";
+import { useState } from "react";
+import { useCart } from "../../contexts/CartContextProvider";
+import { useEffect } from "react";
+import { getCountProductsInCart } from "../../helpers/functions";
 
 const pages = [
   { name: "Home", link: "/", id: 1 },
@@ -76,6 +80,13 @@ export default function Navbar() {
     user: { email },
   } = useAuth();
   const navigate = useNavigate();
+  const [count, setCount] = useState(0);
+
+  const { addProductToCart } = useCart();
+
+  useEffect(() => {
+    setCount(getCountProductsInCart);
+  }, [addProductToCart]);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -271,7 +282,7 @@ export default function Navbar() {
                 aria-label="show 1 new mails"
                 color="inherit"
               >
-                <Badge badgeContent={1} color="error">
+                <Badge badgeContent={count} color="error">
                   <ShoppingCartIcon sx={{ color: "white" }} />
                 </Badge>
               </IconButton>
