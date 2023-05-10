@@ -7,7 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { useCart } from "../../contexts/CartContextProvider";
-import { Button } from "@mui/base";
+import { Button } from "@mui/material";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -22,10 +22,13 @@ const rows = [
 ];
 
 export default function Cart() {
-  const { getCart, cart, changeProductCount } = useCart();
+  const { getCart, cart, changeProductCount, deleteCartProduct } = useCart();
+
+  console.log(cart);
   React.useEffect(() => {
     getCart();
   }, []);
+
   const cartCleaner = () => {
     localStorage.removeItem("cart");
     getCart();
@@ -42,13 +45,13 @@ export default function Cart() {
             <TableCell align="right">Price</TableCell>
             <TableCell align="right">Count</TableCell>
             <TableCell align="right">SubPrice</TableCell>
-            <TableCell align="right"></TableCell>
+            <TableCell align="right">-</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {cart?.products.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.item.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
@@ -70,13 +73,15 @@ export default function Cart() {
               </TableCell>
               <TableCell align="right">{row.subPrice}</TableCell>
               <TableCell align="right">
-                <button>Delete</button>
+                <button onClick={() => deleteCartProduct(row.item.id)}>
+                  DELETE
+                </button>
               </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-      <Button onClick={cartCleaner}>BUY NOW FOR {cart?.totalPrice}</Button>
+      <Button onClick={cartCleaner}> BUY NOW FOR {cart?.totalPrice} $</Button>
     </TableContainer>
   );
 }

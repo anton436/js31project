@@ -264,7 +264,8 @@ export default function Navbar() {
                 <ChatIcon />
               </Badge>
             </IconButton>
-            <Link to={"/cart"}>
+
+            <Link to="/cart">
               <IconButton
                 size="large"
                 aria-label="show 1 new mails"
