@@ -18,7 +18,9 @@ import ChatIcon from "@mui/icons-material/Chat";
 import { useAuth } from "../../contexts/AuthContextProvider";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { MenuList } from "@mui/material";
+import { useState } from "react";
 import { useCart } from "../../contexts/CartContextProvider";
+import { useEffect } from "react";
 import { getCountProductsInCart } from "../../helpers/functions";
 
 const pages = [
@@ -75,14 +77,13 @@ export default function Navbar() {
 
   // search
   const [searchParams, setSearchParams] = useSearchParams();
-  const [search, setSearch] = React.useState(searchParams.get("q" || ""));
+  const [search, setSearch] = useState(searchParams.get("q") || "");
 
-  React.useEffect(() => {
+  useEffect(() => {
     setSearchParams({
       q: search,
     });
   }, [search]);
-
   // search
 
   const {
@@ -90,10 +91,13 @@ export default function Navbar() {
     user: { email },
   } = useAuth();
   const navigate = useNavigate();
-
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
 
   const { addProductToCart } = useCart();
+
+  useEffect(() => {
+    setCount(getCountProductsInCart);
+  }, [addProductToCart]);
 
   React.useEffect(() => {
     setCount(getCountProductsInCart());

@@ -1,5 +1,6 @@
 import { Box, Grid, Pagination } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { useProducts } from "../../contexts/ProductContextProvider";
 import ProductCard from "./ProductCard";
@@ -16,7 +17,8 @@ const ProductList = () => {
     getProducts();
     setPage(1);
   }, [searchParams]);
-  // pagination
+
+  //pagination
   const [page, setPage] = useState(1);
   const itemsPerPage = 3;
   const count = Math.ceil(products.length / itemsPerPage);
@@ -26,7 +28,7 @@ const ProductList = () => {
   };
 
   function currentData() {
-    const begin = page - 1 * itemsPerPage;
+    const begin = (page - 1) * itemsPerPage;
     const end = begin + itemsPerPage;
     return products.slice(begin, end);
   }
@@ -48,6 +50,7 @@ const ProductList = () => {
         </Box>
         <Pagination
           count={count}
+          page={page}
           onChange={handleChange}
           variant="outlined"
           color="secondary"

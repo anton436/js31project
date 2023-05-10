@@ -1,5 +1,5 @@
-import { FormControl } from "@mui/base";
 import {
+  FormControl,
   FormControlLabel,
   FormLabel,
   Grid,
@@ -16,14 +16,14 @@ const SideBar = () => {
     <Grid md={3} item>
       <Paper elevation={5}>
         <FormControl>
-          <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
+          <FormLabel id="demo-radio-buttons-group-label">type</FormLabel>
           <RadioGroup
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="all"
             name="radio-buttons-group"
             onChange={(e) => fetchByParams("type", e.target.value)}
           >
-            <FormControlLabel value="all" control={<Radio />} label="Male" />
+            <FormControlLabel value="all" control={<Radio />} label="All" />
             <FormControlLabel
               value="female"
               control={<Radio />}

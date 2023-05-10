@@ -1,6 +1,38 @@
 {
   "products": [
     {
+      "name": "name",
+      "description": "some descr",
+      "price": 2345,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "female",
+      "id": 2
+    },
+    {
+      "name": "hello ",
+      "description": "qorlkd",
+      "price": 456,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "male",
+      "id": 3
+    },
+    {
+      "name": "AIzhamal",
+      "description": "bbbb",
+      "price": 12345,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "other",
+      "id": 4
+    },
+    {
+      "name": "Adilet",
+      "description": "Gazybekov",
+      "price": 1000,
+      "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
+      "type": "female",
+      "id": 5
+    },
+    {
       "name": "Nilom",
       "description": "sg",
       "price": 436,

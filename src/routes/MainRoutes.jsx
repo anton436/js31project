@@ -15,9 +15,10 @@ import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
 import NewsPages from "../components/news_page/NewsPages";
 import CartPage from "../pages/CartPage";
 import { useAuth } from "../contexts/AuthContextProvider";
+import { ADMIN } from "../helpers/consts";
 
 const MainRoutes = () => {
-  const { user, ADMIN } = useAuth();
+  const { user } = useAuth();
   const PUBLIC_ROUTES = [
     { link: "/products", element: <ProductsPage />, id: 1 },
     { link: "/", element: <HomePage />, id: 2 },

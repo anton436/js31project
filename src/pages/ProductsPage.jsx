@@ -1,5 +1,4 @@
-import { Grid } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Grid } from "@mui/material";
 import React from "react";
 import ProductList from "../components/Product/ProductList";
 import SideBar from "../components/Product/SideBar";
