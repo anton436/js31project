@@ -16,8 +16,10 @@ import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 import SearchIcon from "@mui/icons-material/Search";
 import ChatIcon from "@mui/icons-material/Chat";
 import { useAuth } from "../../contexts/AuthContextProvider";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { MenuList } from "@mui/material";
+import { useCart } from "../../contexts/CartContextProvider";
+import { getCountProductsInCart } from "../../helpers/functions";
 
 const pages = [
   { name: "Home", link: "/", id: 1 },
@@ -71,11 +73,31 @@ export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+  // search
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSearch] = React.useState(searchParams.get("q" || ""));
+
+  React.useEffect(() => {
+    setSearchParams({
+      q: search,
+    });
+  }, [search]);
+
+  // search
+
   const {
     handleLogout,
     user: { email },
   } = useAuth();
   const navigate = useNavigate();
+
+  const [count, setCount] = React.useState(0);
+
+  const { addProductToCart } = useCart();
+
+  React.useEffect(() => {
+    setCount(getCountProductsInCart());
+  }, [addProductToCart]);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -251,6 +273,8 @@ export default function Navbar() {
                 sx={{ paddingTop: "10px", paddingLeft: "10px", width: "50px" }}
               />
               <StyledInputBase
+                onChange={(e) => setSearch(e.target.value)}
+                value={search}
                 placeholder="SEARCH PUMA.COM"
                 inputProps={{ "aria-label": "search" }}
               />
@@ -271,7 +295,7 @@ export default function Navbar() {
                 aria-label="show 1 new mails"
                 color="inherit"
               >
-                <Badge badgeContent={1} color="error">
+                <Badge badgeContent={count} color="error">
                   <ShoppingCartIcon sx={{ color: "white" }} />
                 </Badge>
               </IconButton>
