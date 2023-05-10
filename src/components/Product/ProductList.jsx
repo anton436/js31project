@@ -21,7 +21,7 @@ const ProductList = () => {
   //pagination
   const [page, setPage] = useState(1);
   const itemsPerPage = 3;
-  const count = Math.ceil(products.length / itemsPerPage);
+  const count = Math.ceil(products?.length / itemsPerPage);
 
   const handleChange = (e, p) => {
     setPage(p);

@@ -3,7 +3,7 @@
     {
       "name": "name",
       "description": "some descr",
-      "price": 2345,
+      "price": 345,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
       "type": "female",
       "id": 2
@@ -19,7 +19,7 @@
     {
       "name": "AIzhamal",
       "description": "bbbb",
-      "price": 12345,
+      "price": 345,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
       "type": "other",
       "id": 4

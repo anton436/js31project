@@ -71,6 +71,9 @@ const ProductContextProvider = ({ children }) => {
 
     if (value === "all") {
       search.delete(query);
+    } else if (query == "price") {
+      search.set("price_gte", value[0]);
+      search.set("price_lte", value[1]);
     } else {
       search.set(query, value);
     }
