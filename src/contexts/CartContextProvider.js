@@ -83,6 +83,7 @@ const CartContextProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     dispatch({ type: CART.GET_CART, payload: cart });
   };
+  console.log(state);
 
   const checkProductInCart = (id) => {
     let cart = JSON.parse(localStorage.getItem("cart"));
