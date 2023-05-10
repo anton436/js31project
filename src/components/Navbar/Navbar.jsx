@@ -264,16 +264,17 @@ export default function Navbar() {
                 <ChatIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 1 new mails"
-              color="inherit"
-            >
-              <Badge badgeContent={1} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-
+            <Link to={"/cart"}>
+              <IconButton
+                size="large"
+                aria-label="show 1 new mails"
+                color="inherit"
+              >
+                <Badge badgeContent={1} color="error">
+                  <ShoppingCartIcon sx={{ color: "white" }} />
+                </Badge>
+              </IconButton>
+            </Link>
             <IconButton
               size="large"
               aria-label="show 17 new notifications"
