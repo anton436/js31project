@@ -6,6 +6,7 @@ export const authContext = createContext();
 export const useAuth = () => useContext(authContext);
 
 const AuthContextProvider = ({ children }) => {
+  // состояния для храннения данных
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,14 +26,16 @@ const AuthContextProvider = ({ children }) => {
     setPasswordError("");
   };
 
+  // функция регистрации
   const handleSignUp = () => {
     clearErrors();
+    // обращаемся к firebase через fire
     fire
-      .auth()
+      .auth() // используем функцию, которую вернет метод auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => navigate("/"))
+      .then(() => navigate("/")) // переход на home , в случае если регистрация прошла успешно
       .catch((err) => {
-        console.log(err);
+        // обработка ошибок
         switch (err.code) {
           case "auth/email-already-in-use":
           case "auth/invalid-email":
@@ -46,6 +49,7 @@ const AuthContextProvider = ({ children }) => {
       });
   };
 
+  // функция для логина
   const handleLogin = () => {
     clearErrors();
     fire
@@ -71,13 +75,16 @@ const AuthContextProvider = ({ children }) => {
     fire.auth().signOut();
   };
 
+  // функция для отслеживания состояния авторизации
   const authListener = () => {
+    // отлавливаем user'a через встроенную в firebase функцию
     fire.auth().onAuthStateChanged((user) => {
+      // если user  существует
       if (user) {
         clearInputs();
-        setUser(user);
+        setUser(user); // то сохраняем его в состоянии
       } else {
-        setUser("");
+        setUser(""); // если usera нет, то в состоянии ""
       }
     });
   };

@@ -19,17 +19,22 @@ const ProductList = () => {
   }, [searchParams]);
 
   //pagination
-  const [page, setPage] = useState(1);
-  const itemsPerPage = 3;
-  const count = Math.ceil(products?.length / itemsPerPage);
+  const [page, setPage] = useState(1); // текущая страница
+  const itemsPerPage = 3; // кол-во элементов на одной странице
+  const count = Math.ceil(products?.length / itemsPerPage); // общее кол-во страниц пагинации
 
+  // функция для изменения состояния текущей страницы
   const handleChange = (e, p) => {
     setPage(p);
   };
 
+  // функция, которая возвращает только те элементы, которые должны отображаться на текущей странице
   function currentData() {
+    // начальный индекс
     const begin = (page - 1) * itemsPerPage;
+    // конечный индекс
     const end = begin + itemsPerPage;
+    // возвращаем массив, состоящий из фиксированного кол-ва элементов
     return products.slice(begin, end);
   }
 
