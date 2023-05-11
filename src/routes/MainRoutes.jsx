@@ -23,6 +23,8 @@ const MainRoutes = () => {
     { link: "/products", element: <ProductsPage />, id: 1 },
     { link: "/", element: <HomePage />, id: 2 },
     { link: "/auth", element: <AuthPage />, id: 3 },
+    { link: "/admin", element: <AdminPage />, id: 4 },
+    { link: "/edit/:id", element: <EditProductPage />, id: 7 },
     { link: "/about", element: <AboutUsPage />, id: 5 },
     { link: "*", element: <NotFoundPage />, id: 6 },
     { link: "/collection", element: <CollectionPage />, id: 8 },
@@ -30,10 +32,7 @@ const MainRoutes = () => {
     { link: "/cart", element: <CartPage />, id: 10 },
   ];
 
-  const PRIVATE_ROUTES = [
-    { link: "/admin", element: <AdminPage />, id: 4 },
-    { link: "/edit/:id", element: <EditProductPage />, id: 7 },
-  ];
+  const PRIVATE_ROUTES = [];
   return (
     <>
       <Routes>

@@ -3,7 +3,7 @@
     {
       "name": "name",
       "description": "some descr",
-      "price": 2345,
+      "price": 200,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
       "type": "female",
       "id": 2
@@ -11,7 +11,7 @@
     {
       "name": "hello ",
       "description": "qorlkd",
-      "price": 456,
+      "price": 1000,
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
       "type": "male",
       "id": 3
@@ -19,7 +19,7 @@
     {
       "name": "AIzhamal",
       "description": "bbbb",
-      "price": 12345,
+      "price": "Бесценна",
       "picture": "https://img3.akspic.ru/previews/5/5/4/1/7/171455/171455-zhivopis-illustracia-art-voda-oblako-500x.jpg",
       "type": "other",
       "id": 4
@@ -47,14 +47,6 @@
       "picture": "1234",
       "type": "other",
       "id": 7
-    },
-    {
-      "name": "2134",
-      "description": "2134",
-      "price": 1234,
-      "picture": "1234",
-      "type": "female",
-      "id": 8
     }
   ]
 }
