@@ -95,7 +95,7 @@ const EditProduct = () => {
           size="small"
           name="type"
           onChange={handleInp}
-          value={product.type || ""}
+          value={product.description || ""}
         />
         <Button
           onClick={() => saveEditedProduct(product)}
